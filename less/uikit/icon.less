@@ -1,0 +1,80 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Icon
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+
+@icon-small-font-size:                          125%;
+@icon-medium-font-size:                         150%;
+@icon-large-font-size:                          200%;
+
+@icon-hover-color:                              @global-color;
+@icon-hover-hover-color:                        fade(@global-color, 60%);
+
+@icon-button-background:                        @global-color;
+@icon-button-font-size:                         round((@icon-button-width * 0.5));
+@icon-button-line-height:                       @icon-button-height;
+@icon-button-color:                             @global-background;
+
+@icon-button-hover-background:                  @global-primary-color;
+@icon-button-hover-color:                       fade(@global-contrast-color, 90%);
+
+@icon-button-active-background:                 @icon-button-hover-background;
+@icon-button-active-color:                      fade(@global-contrast-color, 50%);
+
+//
+// New
+//
+
+@icon-button-border-width:                      0;
+@icon-button-border:                            rgba(0,0,0,0);
+@icon-button-hover-border:                      rgba(0,0,0,0);
+@icon-button-active-border:                     rgba(0,0,0,0);
+@icon-button-background-image:                  @global-background-image;
+@icon-button-hover-box-shadow-style:            @global-hover-box-shadow-style;
+@icon-button-hover-box-shadow:                  fade(@global-hover-box-shadow, 54%);
+@icon-button-transition:                        @global-transition;
+@icon-button-transform:                         @global-transform;
+
+
+// Modifier: `uk-icon-hover`
+// ========================================================================
+
+.hook-icon-hover() {}
+
+.hook-icon-hover-hover() {}
+
+
+// Modifier: `uk-icon-button`
+// ========================================================================
+
+.hook-icon-button() {
+    border: @icon-button-border-width solid @icon-button-border;
+    background-image: @icon-button-background-image;
+    line-height: @icon-button-line-height;
+    -webkit-transition: @icon-button-transition;
+    transition: @icon-button-transition;
+    transition-timing-function: ease;
+}
+
+// Hover
+.hook-icon-button-hover() {
+    border-color: @icon-button-hover-border;
+    box-shadow: @icon-button-hover-box-shadow-style @icon-button-hover-box-shadow;
+    transform: @icon-button-transform;
+}
+
+// Active
+.hook-icon-button-active() { border-color: @icon-button-active-border; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-icon-misc() {}

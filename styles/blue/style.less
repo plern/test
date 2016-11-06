@@ -1,0 +1,250 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans';
+@import 'https://fonts.googleapis.com/css?family=Poppins:300,400,700';
+
+/* theme: Luna - blue */
+
+//
+// General
+//
+
+@global-border-radius: 2px;
+@global-box-shadow-style: 11px 35px 37px 0;
+@global-box-shadow: #000;
+@global-hover-box-shadow-style: 11px 35px 37px;
+@global-hover-box-shadow: #000;
+
+//
+// Typography
+//
+
+@global-color: #98b6db;
+@global-heading-color: #ffffff;
+@global-muted-color: rgba(152, 182, 219, 0.5);
+@global-link-color: #ffffff;
+@global-link-hover-color: #ccdaea;
+@global-heading-font-family: 'Josefin Sans';
+@global-alt-font-family: 'Josefin Sans';
+@global-heading-font-weight: 400;
+@global-alt-font-weight: 400;
+@global-letter-spacing: 2px;
+@global-alt-letter-spacing: 2px;
+@global-small-font-size: 12px;
+
+//
+// Backgrounds
+//
+
+@global-background: #205da7;
+@global-muted-background: #1b5296;
+@global-primary-background: #3a7cce;
+@global-secondary-background: #2e6cb8;
+@global-success-background: #58bda0;
+@global-warning-background: #f4c36e;
+@global-danger-background: #db4877;
+@global-gradient-start: rgba(0,0,0,0);
+@global-gradient-end: rgba(0,0,0,0);
+@global-secondary-gradient-start: rgba(0,0,0,0);
+@global-secondary-gradient-end: rgba(0,0,0,0);
+@global-border: rgba(255,255,255, 0.1);
+
+//
+// Animations
+//
+
+@global-transition: color 0.15s ease, background 0.15s ease;
+@global-transform: none;
+
+//
+// Base
+//
+
+@base-code-color: #fff;
+@base-em-color: #db76a1;
+@base-ins-background: #174a88;
+@base-mark-background: #113869;
+@base-h3-font-size: 18px;
+@base-h4-font-size: 16px;
+@base-h5-font-size: 15px;
+@base-h6-font-size: 14px;
+@base-h1-font-size: 40px;
+@base-h2-font-size: 26px;
+@base-blockquote-font-size: 16px;
+
+//
+// Block
+//
+
+@block-secondary-background: #2e6cb8;
+@block-secondary-panel-box-background: lighten(@block-secondary-background, 3%);
+@block-secondary-panel-box-secondary-background: lighten(@block-secondary-background, 5%);
+
+//
+// Breadcrumb
+//
+
+@breadcrumb-divider-font-size: 9px;
+
+//
+// Button
+//
+
+@button-background: #fff;
+@button-color: #205da7;
+@button-hover-background: @global-primary-background;
+@button-active-background: darken(@global-primary-background, 5%);
+@button-primary-background: #3b7ac7;
+@button-primary-color: rgba(255,255,255,0.65);
+@button-primary-hover-background: lighten(@button-primary-background, 5%);
+@button-primary-active-background: darken(@button-primary-background, 3%);
+@button-box-shadow: fade(@global-box-shadow, 7%);
+@button-hover-box-shadow: fade(@global-hover-box-shadow, 8%);
+@button-group-hover-box-shadow: rgba(0,0,0,0);
+
+//
+// Comment
+//
+
+@comment-primary-box-shadow: rgba(0,0,0,0);
+
+//
+// Contrast
+//
+
+@contrast-inverted-color: darken(@global-background, 10%);
+
+//
+// Dropdown
+//
+
+@dropdown-box-shadow-style: 11px 35px 37px 0;
+@dropdown-box-shadow: rgba(114,23,36,0.07);
+
+//
+// Form
+//
+
+@form-border-width: 2px;
+@form-background: #3b7ac7;
+@form-focus-background: lighten(@form-background, 3%);
+@form-disabled-background: fade(darken(@global-background, 10%), 70%);
+
+//
+// Icon
+//
+
+@icon-font-path: "../../fonts";
+@icon-button-background: #fff;
+@icon-button-hover-box-shadow: rgba(0,0,0,0);
+
+//
+// Off-canvas
+//
+
+@offcanvas-box-shadow: fade(@global-box-shadow, 2%);
+
+//
+// Overlay
+//
+
+@overlay-button-box-shadow: fade(@global-box-shadow, 2%);
+
+//
+// Pagination
+//
+
+@pagination-hover-box-shadow: rgba(0,0,0,0);
+
+//
+// Panel
+//
+
+@panel-hover-hover-background: @panel-box-secondary-background;
+@panel-box-shadow-style: 11px 35px 37px 0;
+@panel-box-shadow: rgba(114,23,36,0.07);
+@panel-box-primary-color: #8bb4e8;
+@panel-box-secondary-background: #256bc1;
+@panel-box-secondary-color: #90b2df;
+
+@panel-box-border-radius: 1px;
+@panel-box-primary-box-shadow: rgba(114, 23, 36, 0.07);
+@panel-box-secondary-box-shadow: rgba(114, 23, 36, 0.07);
+@panel-box-primary-button-background: #fff;
+@panel-box-primary-button-box-shadow: fade(@global-box-shadow, 2%);
+@panel-box-primary-button-hover-box-shadow-style: 11px 35px 37px 0;
+@panel-box-primary-button-hover-background: fade(@panel-box-primary-button-background, 85%);
+@panel-box-primary-button-hover-box-shadow: fade(@global-hover-box-shadow, 2%);
+@panel-box-primary-button-active-background: fade(@panel-box-primary-button-background, 75%);
+@panel-box-secondary-button-background: #fff;
+@panel-box-secondary-button-hover-background: fade(@panel-box-secondary-button-background, 85%);
+@panel-box-secondary-button-active-background: fade(@panel-box-secondary-button-background, 75%);
+
+//
+// Thumbnail
+//
+
+@thumbnail-background: @global-secondary-background;
+@thumbnail-hover-background: #3b7ac7;
+@thumbnail-box-shadow: fade(@global-box-shadow, 2%);
+@thumbnail-hover-box-shadow: fade(@global-box-shadow, 3%);
+
+
+// Component variables
+// ==========================================================================
+
+@dotnav-background: lighten(@global-primary-background, 5%);
+@dotnav-active-background: lighten(@global-primary-background, 15%);
+
+
+// Internal Global variables
+// ==========================================================================
+
+@global-style: 'blue';
+
+
+// Theme Variables
+// ========================================================================
+
+// Blocks
+@theme-block-gradient-position: at top left;
+@theme-block-default-gradient-start: #4681C3;
+@theme-block-default-gradient-end: #1E5CA8;
+
+// Navbar
+@theme-navbar-box-shadow: fade(@global-box-shadow, 10%);
+
+// Heading Teaser
+@theme-heading-teaser-gradient-angle: -35deg;
+@theme-heading-teaser-gradient-start: #548cd1;
+@theme-heading-teaser-gradient-end: #205da7;
+@theme-heading-teaser-font-family: 'Poppins';
+@theme-heading-teaser-color: #2A6AB8;
+@theme-heading-teaser-text-shadow-style: 21px -24px 30px;
+@theme-heading-teaser-text-shadow: rgba(17,47,85,0.2);
+
+// Background Animations
+@theme-fx-geometries-box-shadow: rgba(0,0,0,0.1);
+
+// Slideshow Luna
+@theme-slideshow-avatar-box-shadow-style: 0 0 0 0;
+@theme-slideshow-avatar-box-shadow: rgba(0,0,0,0);
+@theme-slideshow-watermark-top: 40%;
+@theme-slideshow-watermark-left: -15%;
+@theme-slideshow-watermark-large-top: 10%;
+@theme-slideshow-watermark-large-left: -10%;
+@theme-slideshow-watermark-font-family: 'Poppins';
+@theme-slideshow-watermark-font-size: 260px;
+@theme-slideshow-watermark-large-font-size: 360px;
+@theme-slideshow-watermark-letter-spacing: -30px;
+@theme-slideshow-watermark-color: rgba(158,206,255,0.15);
+@theme-slideshow-primary-watermark-color: rgba(158,206,255,0.15);
+@theme-slideshow-secondary-watermark-color: rgba(158,206,255,0.15);
+
+// Grid Shadow
+@theme-grid-box-shadow: fade(@global-hover-box-shadow, 8%);
+
+// Background Animations
+@theme-fx-circles-color-1: @theme-block-default-gradient-start;
+@theme-fx-circles-color-2: lighten(@theme-block-default-gradient-end, 2%);

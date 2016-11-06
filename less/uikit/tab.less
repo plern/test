@@ -1,0 +1,161 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Tab
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+
+@tab-padding-vertical:                          12px;
+
+@tab-border-width:                              @global-border-width;
+
+@tab-border:                                    fade(@global-muted-color, 30%);
+@tab-color:                                     @global-color;
+@tab-hover-border:                              fade(@global-muted-color, 30%);
+@tab-hover-background:                          rgba(0,0,0,0);
+@tab-hover-color:                               @global-link-color;
+@tab-active-border:                             fade(@global-muted-color, 30%);
+@tab-active-background:                         rgba(0,0,0,0);
+@tab-active-color:                              @global-link-color;
+@tab-disabled-color:                            @global-muted-color;
+
+//
+// New
+//
+
+@tab-font-family:                               @global-alt-font-family;
+@tab-font-size:                                 @global-small-font-size;
+@tab-font-weight:                               @global-alt-font-weight;
+@tab-text-transform:                            @global-alt-text-transform;
+@tab-letter-spacing:                            @global-alt-letter-spacing;
+
+@tab-hover-transition:                          width 0.15s ease, height 0.15s ease, background 0.15s ease, color 0.15s ease;
+
+@tab-border:                                    @global-border;
+@tab-border-background:                         @global-secondary-background;
+@tab-border-hover-width:                        4px;
+
+
+// Component
+// ========================================================================
+
+//
+// Items
+//
+
+.hook-tab() {
+    position: relative;
+    border: none;
+    font-family: @tab-font-family;
+    font-size: @tab-font-size;
+    font-weight: @tab-font-weight;
+    text-transform: @tab-text-transform;
+    letter-spacing: @tab-letter-spacing;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -@tab-border-width;
+        left: 0;
+        height: 0;
+        width: 100%;
+        background: transparent;
+        -webkit-transition: @tab-hover-transition;
+        transition: @tab-hover-transition;
+    }
+
+}
+
+// Hover
+.hook-tab-hover() {
+
+    &:after {
+        height: @tab-border-hover-width;
+        background: @tab-border-background;
+    }
+
+}
+
+// Active
+.hook-tab-active() {
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        height: @tab-border-hover-width;
+        width: 100%;
+        background: @tab-border-background;
+        box-shadow: none;
+        transition: none;
+    }
+}
+
+// Disabled
+.hook-tab-disabled() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-tab-misc() {
+
+    .uk-tab-bottom > li > a:after {
+        top: -@tab-border-width;
+        bottom: inherit;
+    }
+
+    .uk-tab-bottom > li.uk-active > a:after {
+        top: 0;
+        bottom: inherit;
+    }
+
+    .uk-tab-left > li > a:after {
+        right: -@tab-border-width;
+        left: auto;
+        height: 100%;
+        width: 0;
+    }
+
+    .uk-tab-left > li > a:hover:after {
+        height: 100%;
+        width: @tab-border-hover-width;
+    }
+
+    .uk-tab-left > li.uk-active > a:after {
+        right: 0;
+        left: auto;
+        height: 100%;
+        width: @tab-border-hover-width;
+    }
+
+    .uk-tab-right > li > a:after {
+        right: auto;
+        left: -@tab-border-width;
+        height: 100%;
+        width: 0;
+    }
+
+    .uk-tab-right > li > a:hover:after {
+        height: 100%;
+        width: @tab-border-hover-width;
+    }
+
+    .uk-tab-right > li.uk-active > a:after {
+        right: auto;
+        left: 0;
+        height: 100%;
+        width: @tab-border-hover-width;
+    }
+
+    ul.uk-nav-dropdown a:after { display: none; }
+
+    li.uk-disabled > a:after { content: none; }
+
+}

@@ -1,0 +1,77 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Dropdown
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@dropdown-z-index:                              @global-z-index + 20;
+@dropdown-padding:                              20px;
+@dropdown-color:                                @global-color;
+@dropdown-divider-border:                       @global-border;
+@dropdown-background:                           lighten(@global-secondary-background, 2%);
+
+@dropdown-navbar-color:                         @global-color;
+
+@dropdown-navbar-background:                    lighten(@global-secondary-background, 2%);
+
+//
+// New
+//
+
+@dropdown-border-radius:                        @global-border-radius;
+@dropdown-link-color:                           @global-link-color;
+@dropdown-link-hover-color:                     @global-link-hover-color;
+@dropdown-background-image:                     @global-background-image;
+@dropdown-box-shadow-style:                     0 12px 50px 0;
+@dropdown-box-shadow:                           rgba(16,13,29,0.25);
+@dropdown-form-background:                      @form-background;
+@dropdown-form-focus-background:                @form-focus-background;
+
+
+// Component
+// ========================================================================
+
+.hook-dropdown() {
+    -webkit-backface-visibility: hidden;
+
+    border-radius: @dropdown-border-radius;
+    background-image: @dropdown-background-image;
+    box-shadow: @dropdown-box-shadow-style @dropdown-box-shadow;
+
+    a { color: @dropdown-link-color; }
+    a:hover { color: @dropdown-link-hover-color; }
+
+    .uk-form input,
+    .uk-form select,
+    .uk-form textarea { background-color: @dropdown-form-background; }
+
+    .uk-form input:focus,
+    .uk-form select:focus,
+    .uk-form textarea:focus { background-color: @dropdown-form-focus-background; }
+
+}
+
+
+// Modifier: `uk-dropdown-navbar`
+// ========================================================================
+
+.hook-dropdown-navbar() { background-image: @dropdown-background-image; }
+
+
+// Sub-object: `uk-dropdown-overlay`
+// ========================================================================
+
+.hook-dropdown-overlay() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-dropdown-misc() {
+    .uk-dropdown .uk-nav { margin: 0; }
+}

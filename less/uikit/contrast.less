@@ -1,0 +1,182 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Contrast
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@contrast-color:                                @global-contrast-color;
+@contrast-inverted-color:                       @global-background;
+
+@contrast-nav-side-color:                       fade(@global-contrast-color, 70%);
+@contrast-nav-side-hover-background:            rgba(0,0,0,0);
+@contrast-nav-side-hover-color:                 @global-contrast-color;
+@contrast-nav-side-active-background:           rgba(0,0,0,0);
+@contrast-nav-side-active-color:                @global-contrast-color;
+@contrast-nav-side-nested-color:                fade(@contrast-color, 50%);
+
+@contrast-subnav-pill-hover-background:         fade(@global-contrast-color, 20%);
+@contrast-subnav-pill-hover-color:              @contrast-color;
+@contrast-subnav-pill-active-background:        lighten(@global-primary-background, 15%);
+@contrast-subnav-pill-active-color:             @contrast-color;
+
+@contrast-tab-hover-background:                 rgba(0,0,0,0);
+@contrast-tab-hover-color:                      @contrast-color;
+@contrast-tab-active-background:                rgba(0,0,0,0);
+@contrast-tab-active-color:                     @global-contrast-color;
+
+@contrast-form-border:                          rgba(0,0,0,0);
+@contrast-form-background:                      fade(@global-contrast-color, 80%);
+@contrast-form-focus-border:                    rgba(0,0,0,0);
+@contrast-form-focus-background:                @global-contrast-color;
+
+@contrast-button-color:                         fade(@contrast-inverted-color, 70%);
+@contrast-button-hover-background:              @contrast-color;
+@contrast-button-active-background:             mix(@global-secondary-background, @global-contrast-color, 20%);
+@contrast-button-primary-background:            lighten(@global-primary-background, 10%);
+@contrast-button-primary-color:                 fade(@contrast-color, 70%);
+@contrast-button-primary-hover-background:      lighten(@global-primary-background, 15%);
+@contrast-button-primary-active-background:     darken(@global-primary-background, 5%);
+
+@contrast-icon-button-hover-background:         lighten(@global-primary-background, 15%);
+@contrast-icon-button-hover-color:              fade(@global-contrast-color, 50%);
+@contrast-icon-button-active-background:        @global-color;
+@contrast-icon-button-active-color:             lighten(@global-background, 20%);
+
+@contrast-text-muted-color:                     fade(@global-contrast-color, 50%);
+@contrast-text-primary-color:                   @global-secondary-gradient-start;
+
+@contrast-text-primary-color:                   lighten(@global-primary-color, 25%);
+
+//
+// New
+//
+
+@contrast-button-primary-border:                rgba(0,0,0,0);
+@contrast-button-link-color:                    @contrast-base-link-color;
+@contrast-button-disabled-background:           fade(@contrast-button-background, 10%);
+@contrast-button-disabled-color:                fade(@contrast-text-muted-color, 30%);
+@contrast-subnav-pill-active-border:            rgba(0,0,0,0);
+@contrast-tab-border-background:                lighten(@global-primary-background, 15%);
+@contrast-table-caption-color:                  @contrast-text-muted-color;
+@contrast-table-heading-color:                  @global-contrast-color;
+@contrast-table-striped-background:             fade(@global-contrast-color, 5%);
+@contrast-table-hover-background:               fade(@global-contrast-color, 10%);
+
+
+// Base
+// ========================================================================
+
+.hook-contrast-base-code() {}
+
+
+// Nav
+// ========================================================================
+
+.hook-contrast-nav-side() {}
+.hook-contrast-nav-side-hover() {}
+.hook-contrast-nav-side-active() {}
+.hook-contrast-nav-side-header() {}
+.hook-contrast-nav-side-divider() {}
+
+
+// Subnav
+// ========================================================================
+
+.hook-contrast-subnav() {}
+.hook-contrast-subnav-hover() {}
+.hook-contrast-subnav-active() {}
+.hook-contrast-subnav-line-divider() {}
+.hook-contrast-subnav-pill-hover() {}
+.hook-contrast-subnav-pill-active() { border-color: @contrast-subnav-pill-active-border; }
+
+
+// Tab
+// ========================================================================
+
+.hook-contrast-tab() {}
+
+.hook-contrast-tab-hover() {
+    &:after { background: @contrast-tab-border-background;}
+}
+
+.hook-contrast-tab-active() {
+    &:after { background: @contrast-tab-border-background; }
+}
+
+
+// List
+// ========================================================================
+
+.hook-contrast-list-line() {}
+
+
+// Form
+// ========================================================================
+
+.hook-contrast-form() { background-clip: border-box; }
+.hook-contrast-form-focus() {}
+
+
+// Button
+// ========================================================================
+
+.hook-contrast-button() {
+
+    border-color: @contrast-button-primary-border;
+    box-shadow: none;
+
+    &.uk-button-link,
+    &.uk-button-link:hover,
+    &.uk-button-link:focus,
+    &.uk-button-link:active,
+    &.uk-button-link.uk-active {
+
+        background: none;
+        color: @contrast-button-link-color;
+
+        &:after { background: @contrast-button-link-color; }
+
+    }
+
+    &:not(.uk-button-link):disabled {
+        background-color: @contrast-button-disabled-background;
+        color: @contrast-button-disabled-color;
+    }
+
+}
+
+.hook-contrast-button-hover() {}
+.hook-contrast-button-active() {}
+.hook-contrast-button-primary() { box-shadow: none; }
+.hook-contrast-button-primary-hover() {}
+.hook-contrast-button-primary-active() {}
+
+
+// Icon
+// ========================================================================
+
+.hook-contrast-icon-hover() { box-shadow: none; }
+.hook-contrast-icon-hover-hover() {}
+.hook-contrast-icon-button() {}
+.hook-contrast-icon-button-hover() {}
+.hook-contrast-icon-button-active() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-contrast-misc() {
+
+    .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6 { color: @contrast-color; }
+
+    .uk-table caption { color: @contrast-table-caption-color; }
+    .uk-table thead th { color: @contrast-table-heading-color; }
+    .uk-table-striped tbody tr:nth-of-type(odd) { background: @contrast-table-striped-background; }
+    .uk-table-hover tbody tr:hover { background: @contrast-table-hover-background; }
+
+}

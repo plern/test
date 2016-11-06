@@ -1,0 +1,40 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@bs-input-height:            35px;
+@bs-button-height:           35px;
+
+
+/* Button overrides
+ ========================================================================== */
+
+.input-append .add-on,
+.input-append .btn,
+.input-append .btn-group,
+.input-append input[class*="span"],
+.input-append .uneditable-input[class*="span"],
+.input-prepend input[class*="span"],
+.input-prepend .uneditable-input[class*="span"],
+.row-fluid input[class*="span"],
+.row-fluid select[class*="span"],
+.row-fluid textarea[class*="span"],
+.row-fluid .uneditable-input[class*="span"],
+.row-fluid .input-prepend [class*="span"],
+.row-fluid .input-append [class*="span"] { margin-left: 0; }
+
+.btn.disabled,
+.btn[disabled] { background: @button-disabled-background !important; }
+
+
+/* Form overrides
+ ========================================================================== */
+
+.control-group input,
+.row-fluid input[class*="span"],
+.input-append .btn { min-height: 45px !important; }
+
+/* Tabs overrides
+ ========================================================================== */
+
+.nav-tabs > .active > a:after,
+.nav-tabs > .active > a:hover:after,
+.nav-tabs > .active > a:focus:after { display: none; }

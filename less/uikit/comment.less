@@ -1,0 +1,119 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Comment
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@comment-header-margin-bottom:                  @global-margin;
+
+@comment-avatar-margin-right:                   @global-margin;
+
+@comment-title-font-size:                       18px;
+@comment-title-line-height:                     @global-line-height;
+
+@comment-meta-color:                            @global-color;
+@comment-meta-font-size:                        11px;
+@comment-meta-line-height:                      20px;
+
+@comment-list-margin-top:                       @global-grid-gutter-large;
+
+//
+// New
+//
+
+@comment-header-padding:                        @global-padding;
+
+@comment-header-border-width:                   @global-border-width;
+@comment-header-border:                         @global-border;
+
+@comment-title-text-transform:                  @global-text-transform;
+@comment-title-letter-spacing:                  @global-letter-spacing;
+
+@comment-meta-font-family:                      @global-alt-font-family;
+@comment-meta-font-weight:                      @global-alt-font-weight;
+@comment-meta-text-transform:                   @global-alt-text-transform;
+@comment-meta-letter-spacing:                   @global-alt-letter-spacing;
+
+@comment-primary-padding:                       @global-padding;
+@comment-primary-background:                    @global-muted-background;
+@comment-primary-background-image:              @global-background-image;
+@comment-primary-box-shadow-style:              @global-box-shadow-style;
+@comment-primary-box-shadow:                    fade(@global-box-shadow, 20%);
+@comment-primary-border-radius:                 @global-border-radius;
+
+@comment-primary-header-border:                 lighten(@comment-header-border, 10%);
+
+
+
+// Component
+// ========================================================================
+
+.hook-comment() {}
+
+
+// Sub-object `uk-comment-header`
+// ========================================================================
+
+.hook-comment-header() {
+    padding-bottom: @comment-header-padding;
+    border-bottom: @comment-header-border-width solid @comment-header-border;
+}
+
+
+// Sub-object `uk-comment-avatar`
+// ========================================================================
+
+.hook-comment-avatar() {}
+
+
+// Sub-object `uk-comment-title`
+// ========================================================================
+
+.hook-comment-title() {
+    text-transform: @comment-title-text-transform;
+    letter-spacing: @comment-title-letter-spacing;
+}
+
+
+// Sub-object `uk-comment-meta`
+// ========================================================================
+
+.hook-comment-meta() {
+    font-family: @comment-meta-font-family;
+    font-weight: @comment-meta-font-weight;
+    text-transform: @comment-meta-text-transform;
+    letter-spacing: @comment-meta-letter-spacing;
+}
+
+
+// Sub-object `uk-comment-body`
+// ========================================================================
+
+.hook-comment-body() {}
+
+
+// Sub-object `uk-comment-primary`
+// ========================================================================
+
+.hook-comment-primary() {
+    padding: @comment-primary-padding;
+    border-radius: @comment-primary-border-radius;
+    background-color: @comment-primary-background;
+    background-image: @comment-primary-background-image;
+    box-shadow: @comment-primary-box-shadow-style  @comment-primary-box-shadow;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-comment-misc() {
+
+    .uk-comment-primary .uk-comment-header { border-bottom-color: @comment-primary-header-border; }
+
+}

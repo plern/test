@@ -1,0 +1,164 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Base
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@base-body-background:                          @global-background;
+@base-body-font-family:                         @global-font-family;
+@base-body-font-weight:                         @global-font-weight;
+@base-body-font-size:                           @global-font-size;
+@base-body-line-height:                         @global-line-height;
+@base-body-color:                               @global-color;
+
+@base-link-color:                               @global-link-color;
+@base-link-hover-color:                         @global-link-hover-color;
+@base-link-hover-text-decoration:               none;
+
+@base-code-color:                               #BBB7F3;
+@base-em-color:                                 @global-primary-color;
+@base-ins-color:                                @global-color;
+@base-ins-background:                           #4B4887;
+@base-mark-color:                               @global-color;
+@base-mark-background:                          #4B4887;
+
+@base-margin-vertical:                          @global-margin;
+
+@base-heading-font-family:                      @global-heading-font-family;
+@base-heading-font-weight:                      @global-heading-font-weight;
+@base-heading-color:                            @global-heading-color;
+@base-heading-margin-top:                       @global-margin-large;
+@base-h1-font-size:                             45px;
+@base-h1-line-height:                           round((@base-h1-font-size * 1.29)); // 58px
+@base-h2-font-size:                             34px;
+@base-h2-line-height:                           round((@base-h2-font-size * 1.4)); // 48px
+@base-h3-font-size:                             20px;
+@base-h3-line-height:                           round((@base-h3-font-size * 1.45)); // 29px
+@base-h4-font-size:                             18px;
+@base-h4-line-height:                           round((@base-h4-font-size * 1.44)); // 26px
+@base-h5-font-size:                             16px;
+@base-h5-line-height:                           round((@base-h5-font-size * 1.5)); // 24px
+@base-h6-font-size:                             14px;
+@base-h6-line-height:                           round((@base-h6-font-size * 1.57)); // 22px
+
+@base-hr-border:                                @global-border;
+
+@base-blockquote-border:                        @global-border;
+@base-blockquote-font-size:                     18px;
+@base-blockquote-line-height:                   round((@base-blockquote-font-size * 1.44)); // 26px
+
+@base-code-font-size:                           13px;
+
+@base-pre-padding:                              @global-padding;
+@base-pre-background:                           rgba(255,255,255,0.05);
+@base-pre-color:                                @global-color;
+@base-pre-font-size:                            13px;
+@base-pre-line-height:                          round((@base-pre-font-size * 1.46)); // 19px
+
+@base-selection-background:                     fade(@global-primary-background, 70%);
+@base-selection-color:                          @global-contrast-color;
+
+//
+// New
+//
+
+@base-body-background-image:                    @global-background-image;
+@base-heading-alt-color:                        @base-heading-color;
+@base-heading-alt-font-family:                  @global-alt-font-family;
+@base-heading-alt-font-weight:                  @global-alt-font-weight;
+@base-heading-text-transform:                   @global-text-transform;
+@base-heading-alt-text-transform:               @global-alt-text-transform;
+@base-heading-letter-spacing:                   @global-letter-spacing;
+@base-heading-alt-letter-spacing:               @global-alt-letter-spacing;
+@base-pre-border-radius:                        @global-border-radius;
+
+
+// Body
+// ========================================================================
+
+.hook-base-body() {
+    background-image: @base-body-background-image;
+}
+
+
+// Links
+// ========================================================================
+
+.hook-base-link() {}
+
+.hook-base-link-hover() {}
+
+
+// Text-level semantics
+// ========================================================================
+
+.hook-base-code() {}
+
+
+// Headings
+// ========================================================================
+
+.hook-base-h() {
+    text-transform: @base-heading-text-transform;
+    letter-spacing: @base-heading-letter-spacing;
+}
+
+.hook-base-h1() { color: @base-heading-alt-color; }
+
+.hook-base-h2() { color: @base-heading-alt-color; }
+
+.hook-base-h3() {}
+
+.hook-base-h4() {
+    font-family: @base-heading-alt-font-family;
+    font-weight: @base-heading-alt-font-weight;
+    text-transform: @base-heading-alt-text-transform;
+    letter-spacing: @base-heading-alt-letter-spacing;
+}
+
+.hook-base-h5() {
+    font-family: @base-heading-alt-font-family;
+    font-weight: @base-heading-alt-font-weight;
+    text-transform: @base-heading-alt-text-transform;
+    letter-spacing: @base-heading-alt-letter-spacing;
+}
+
+.hook-base-h6() {
+    font-family: @base-heading-alt-font-family;
+    font-weight: @base-heading-alt-font-weight;
+    text-transform: @base-heading-alt-text-transform;
+    letter-spacing: @base-heading-alt-letter-spacing;
+}
+
+
+// Horizontal rules
+// ========================================================================
+
+.hook-base-hr() {}
+
+
+// Blockquotes
+// ========================================================================
+
+.hook-base-blockquote() {}
+
+
+// Preformatted text
+// ========================================================================
+
+.hook-base-pre() {
+    border-radius: @base-pre-border-radius;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-base-misc() {
+    pre code { background: transparent; }
+}

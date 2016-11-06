@@ -1,0 +1,56 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Off-canvas
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@offcanvas-z-index:                             @global-z-index;
+@offcanvas-bar-background:                      @global-secondary-background;
+
+@offcanvas-panel-margin:                        @global-padding;
+@offcanvas-panel-color:                         @global-color;
+@offcanvas-panel-link-color:                    @global-link-color;
+@offcanvas-panel-link-hover-color:              @global-link-hover-color;
+@offcanvas-panel-title-color:                   @offcanvas-panel-link-color;
+
+//
+// New
+//
+
+@offcanvas-background-image:                    @global-background-image;
+@offcanvas-box-shadow-style:                    @global-hover-box-shadow-style;
+@offcanvas-box-shadow:                          fade(@global-box-shadow, 20%);
+
+
+// Component
+// ========================================================================
+
+.hook-offcanvas() {}
+
+
+// Sub-object `uk-offcanvas-bar`
+// ========================================================================
+
+.hook-offcanvas-bar() {
+    background-image: @offcanvas-background-image;
+    box-shadow: @offcanvas-box-shadow-style @offcanvas-box-shadow;
+}
+
+
+// Panel in offcanvas
+// ========================================================================
+
+.hook-offcanvas-panel() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-offcanvas-misc() {
+    .uk-nav-offcanvas .uk-nav-header { padding: @offcanvas-panel-margin; }
+}

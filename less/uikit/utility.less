@@ -1,0 +1,57 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Utility
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@utility-container-max-width:                   980px + (@utility-container-padding-horizontal * 2);
+@utility-container-padding-horizontal:          @global-grid-gutter;
+
+@utility-container-large-max-width:             1200px + (@utility-container-large-padding-horizontal * 2);
+@utility-container-large-padding-horizontal:    @global-grid-gutter-large;
+
+@utility-align-horizontal:                      @global-margin;
+@utility-align-vertical:                        @global-margin;
+
+@utility-margin:                                @global-margin;
+
+@utility-border-rounded:                        (@global-border-radius + 1px);
+
+@utility-heading-large-small-font-size:         36px;
+@utility-heading-large-small-line-height:       48px;
+@utility-heading-large-font-size:               50px;
+@utility-heading-large-line-height:             68px;
+
+@utility-link-muted-color:                      @global-muted-color;
+@utility-link-muted-hover-color:                @global-muted-color;
+
+@utility-scrollable-box-border:                 @global-border;
+
+//
+// New
+//
+
+@utility-border-radius:                         @global-border-radius;
+
+
+// Container
+// ========================================================================
+
+.hook-container() {}
+
+
+// Scrollable
+// ========================================================================
+
+.hook-scrollable-box() { border-radius: @utility-border-radius; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-utility-misc() {}

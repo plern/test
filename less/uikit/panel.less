@@ -1,0 +1,360 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Panel
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@panel-title-margin-bottom:                            @global-margin;
+@panel-title-font-size:                                18px;
+@panel-title-font-weight:                              @global-heading-font-weight;
+@panel-title-line-height:                              @global-line-height;
+@panel-title-color:                                    @global-heading-color;
+@panel-title-text-transform:                           @global-text-transform;
+
+@panel-teaser-margin-bottom:                           35px;
+
+@panel-box-padding:                                    @global-padding;
+@panel-box-background:                                 desaturate(lighten(@global-background, 4%), 10%);
+@panel-box-color:                                      @global-color;
+@panel-box-title-color:                                @global-heading-color;
+
+@panel-box-primary-background:                         @global-primary-background;
+@panel-box-primary-color:                              #e3839e;
+@panel-box-primary-title-color:                        @global-heading-color;
+
+@panel-box-secondary-background:                       #6C68A0;
+@panel-box-secondary-color:                            #bbb7df;
+@panel-box-secondary-title-color:                      @global-heading-color;
+
+@panel-hover-padding:                                  @global-padding;
+@panel-hover-color:                                    @global-color;
+@panel-hover-hover-background:                         @panel-box-background;
+@panel-hover-hover-color:                              @global-color;
+
+@panel-header-title-border:                            @global-border;
+@panel-header-title-color:                             @global-heading-color;
+
+@panel-divider-gutter:                                 @global-grid-gutter;
+@panel-divider-gutter-large:                           @global-grid-gutter-large;
+@panel-divider-border:                                 @global-border;
+
+//
+// New
+//
+
+@panel-title-font-family:                              @global-heading-font-family;
+
+@panel-box-shadow-style:                               0 12px 50px 0;
+@panel-box-shadow:                                     rgba(16,13,29,0.25);
+@panel-box-border-radius:                              15px;
+
+@panel-box-background-image:                           @global-background-image;
+@panel-box-button-disabled-background:                 desaturate(lighten(@global-muted-background, 2%), 5%);
+@panel-box-button-disabled-color:                      @button-disabled-color;
+
+@panel-box-primary-gradient-start:                     @global-gradient-start;
+@panel-box-primary-gradient-end:                       @global-gradient-end;
+@panel-box-primary-box-shadow:                         rgba(16,13,29,0.80);
+
+@panel-box-secondary-gradient-start:                   @global-secondary-gradient-start;
+@panel-box-secondary-gradient-end:                     @global-secondary-gradient-end;
+@panel-box-secondary-box-shadow:                       rgba(16,13,29,0.80);
+
+@panel-box-primary-link-color:                         @global-link-color;
+@panel-box-primary-button-border:                      rgba(0,0,0,0);
+@panel-box-primary-button-background:                  @panel-box-primary-color;
+@panel-box-primary-button-box-shadow-style:            @global-box-shadow-style;
+@panel-box-primary-button-box-shadow:                  fade(@global-box-shadow, 20%);
+@panel-box-primary-button-color:                       @panel-box-primary-background;
+@panel-box-primary-button-hover-background:            lighten(@panel-box-primary-button-background, 10%);
+@panel-box-primary-button-hover-box-shadow-style:      0 10px 17px 0;
+@panel-box-primary-button-hover-box-shadow:            fade(@global-hover-box-shadow, 20%);
+@panel-box-primary-button-hover-color:                 lighten(@panel-box-primary-button-color, 10%);
+@panel-box-primary-button-active-background:           darken(@panel-box-primary-color, 5%);
+@panel-box-primary-button-active-color:                @panel-box-primary-background;
+@panel-box-primary-button-primary-gradient-start:      rgba(0,0,0,0);
+@panel-box-primary-button-primary-gradient-end:        rgba(0,0,0,0);
+@panel-box-primary-button-primary-background-image:    @button-background-image;
+@panel-box-primary-button-disabled-background:         fade(@panel-box-primary-button-background, 50%);
+@panel-box-primary-button-disabled-color:              @panel-box-primary-button-color;
+
+@panel-box-secondary-link-color:                       @global-link-color;
+@panel-box-secondary-border-width:                     0;
+@panel-box-secondary-border:                           rgba(0,0,0,0);
+@panel-box-secondary-button-border:                    rgba(0,0,0,0);
+@panel-box-secondary-button-background:                @panel-box-secondary-color;
+@panel-box-secondary-button-color:                     @panel-box-secondary-background;
+@panel-box-secondary-button-hover-background:          lighten(@panel-box-secondary-button-background, 10%);
+@panel-box-secondary-button-hover-color:               lighten(@panel-box-secondary-button-color, 10%);
+@panel-box-secondary-button-active-background:         darken(@panel-box-secondary-button-background, 5%);
+@panel-box-secondary-button-active-color:              @panel-box-secondary-background;
+@panel-box-secondary-button-disabled-background:       fade(@panel-box-secondary-button-background, 50%);
+@panel-box-secondary-button-disabled-color:            @panel-box-secondary-button-color;
+
+@panel-box-primary-badge-background:                   @global-secondary-background;
+@panel-box-primary-badge-color:                        @badge-color;
+
+@panel-box-large-padding:                              35px;
+@panel-space-large-padding:                            35px;
+@panel-hover-large-padding:                            35px;
+
+@panel-box-teaser-large-margin:                        -@panel-box-large-padding;
+@panel-hover-teaser-large-margin:                      -@panel-hover-large-padding;
+
+
+// Sub-object: `uk-panel-title`
+// ========================================================================
+
+.hook-panel-title() { font-family: @panel-title-font-family; }
+
+
+// Sub-object: `uk-panel-badge`
+// ========================================================================
+
+.hook-panel-badge() {}
+
+
+// Modifier: `uk-panel-box`
+// ========================================================================
+
+.hook-panel-box() {
+
+    overflow: hidden;
+    border-radius: @panel-box-border-radius;
+    background-image: @panel-box-background-image;
+    box-shadow: @panel-box-shadow-style @panel-box-shadow;
+
+    .uk-panel-teaser > .uk-overlay { border-radius: @panel-box-border-radius @panel-box-border-radius 0 0; }
+
+    .uk-button:disabled {
+        background-color: @panel-box-button-disabled-background !important;
+        color: @panel-box-button-disabled-color !important;
+    }
+
+    .uk-button-link:disabled { background: none !important; }
+
+}
+
+.hook-panel-box-hover() {}
+
+//
+// Sub-modifier: `uk-panel-box-primary`
+//
+
+.hook-panel-box-primary() {
+
+    background-image: @panel-box-background-image,
+                      linear-gradient(@global-gradient-angle, @panel-box-primary-gradient-start, @panel-box-primary-gradient-end);
+    box-shadow: @panel-box-shadow-style @panel-box-primary-box-shadow;
+
+    .uk-panel-title > a,
+    h1, h2, h3, h4, h5, h6 { color: @panel-box-primary-title-color; }
+
+    .uk-button,
+    .uk-button-primary {
+        border-color: @panel-box-primary-button-border;
+        background-color: @panel-box-primary-button-background;
+        box-shadow: @panel-box-primary-button-box-shadow-style @panel-box-primary-button-box-shadow;
+        color: @panel-box-primary-button-color;
+    }
+
+    .uk-button-primary {
+        background-image: @panel-box-primary-button-primary-background-image,
+                          linear-gradient(@global-gradient-angle, @panel-box-primary-button-primary-gradient-start, @panel-box-primary-button-primary-gradient-end);
+    }
+
+    .uk-button:hover,
+    .uk-button:focus,
+    .uk-button-primary:hover,
+    .uk-button-primary:focus {
+        background-color: @panel-box-primary-button-hover-background;
+        background-image: @panel-box-primary-button-primary-background-image,
+                          linear-gradient(@global-gradient-angle, @panel-box-primary-button-primary-gradient-start, @panel-box-primary-button-primary-gradient-end);
+        box-shadow: @panel-box-primary-button-hover-box-shadow-style @panel-box-primary-button-hover-box-shadow;
+        color: @panel-box-primary-button-hover-color;
+    }
+
+    .uk-button:active,
+    .uk-button-primary:active {
+        background-color: @panel-box-primary-button-active-background;
+        color: @panel-box-primary-button-active-color;
+    }
+
+    .uk-button:disabled {
+        background-image: none;
+        background-color: @panel-box-primary-button-disabled-background !important;
+        color: @panel-box-primary-button-disabled-color !important;
+    }
+
+    .uk-button-link,
+    .uk-button-link:hover,
+    .uk-button-link:focus,
+    .uk-button-link:active,
+    .uk-button-link.uk-active {
+
+        border-color: transparent;
+        box-shadow: none;
+        background: none;
+        color: @panel-box-primary-link-color;
+
+        &:after { background-color: @panel-box-primary-link-color; }
+
+    }
+
+    .uk-button-link:disabled {
+
+        background: none !important;
+        color: @panel-box-primary-color !important;
+
+        &:after { background-color: @panel-box-primary-color !important; }
+
+    }
+
+    a { color: @panel-box-primary-link-color; }
+    a:hover,
+    a:focus { color: @panel-box-primary-color; }
+
+    .uk-panel-badge {
+        background: @panel-box-primary-badge-background;
+        color: @panel-box-primary-badge-color;
+    }
+
+}
+
+.hook-panel-box-primary-hover() {}
+
+//
+// Sub-modifier: `uk-panel-box-secondary`
+//
+
+.hook-panel-box-secondary() {
+
+    background-image: @panel-box-background-image,
+                      linear-gradient(@global-gradient-angle, @panel-box-secondary-gradient-start, @panel-box-secondary-gradient-end);
+    box-shadow: @panel-box-shadow-style @panel-box-secondary-box-shadow;
+    border: @panel-box-secondary-border-width solid @panel-box-secondary-border;
+
+    .uk-button,
+    .uk-button-primary {
+        border-color: @panel-box-secondary-button-border;
+        background-color: @panel-box-secondary-button-background;
+        background-image: @button-background-image,
+                          none;
+        box-shadow: @panel-box-primary-button-box-shadow-style @panel-box-primary-button-box-shadow;
+        color: @panel-box-secondary-button-color;
+    }
+
+    .uk-button-primary {
+        background-image: @panel-box-primary-button-primary-background-image,
+                          linear-gradient(@global-gradient-angle, @panel-box-primary-button-primary-gradient-start, @panel-box-primary-button-primary-gradient-end);
+    }
+
+    .uk-button:hover,
+    .uk-button:focus,
+    .uk-button-primary:hover,
+    .uk-button-primary:focus {
+        background-color: @panel-box-secondary-button-hover-background;
+        background-image: @panel-box-primary-button-primary-background-image,
+                          linear-gradient(@global-gradient-angle, @panel-box-primary-button-primary-gradient-start, @panel-box-primary-button-primary-gradient-end);
+        box-shadow: @panel-box-primary-button-hover-box-shadow-style @panel-box-primary-button-hover-box-shadow;
+        color: @panel-box-secondary-button-hover-color;
+    }
+
+    .uk-button:active,
+    .uk-button-primary:active {
+        background-color: @panel-box-secondary-button-active-background;
+        color: @panel-box-secondary-button-active-color;
+    }
+
+    .uk-button:disabled {
+        background-image: none;
+        background-color: @panel-box-secondary-button-disabled-background !important;
+        color: @panel-box-secondary-button-disabled-color !important;
+    }
+
+    .uk-button-link,
+    .uk-button-link:hover,
+    .uk-button-link:focus,
+    .uk-button-link:active,
+    .uk-button-link.uk-active {
+        border-color: transparent;
+        box-shadow: none;
+        background: none;
+        color: @panel-box-secondary-link-color;
+    }
+
+    .uk-button-link:after { background: @panel-box-secondary-link-color; }
+
+    .uk-button-link:disabled {
+
+        background: none !important;
+        color: @panel-box-secondary-color !important;
+
+        &:after { background-color: @panel-box-secondary-color !important; }
+
+    }
+
+    a:hover,
+    a:focus { color: @panel-box-secondary-color; }
+
+}
+
+.hook-panel-box-secondary-hover() {}
+
+
+// Modifier: `uk-panel-hover`
+// ========================================================================
+
+.hook-panel-hover() {
+    overflow: hidden;
+    border-radius: @panel-box-border-radius;
+    transition: box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.hook-panel-hover-hover() {
+    background-image: @panel-box-background-image;
+    box-shadow: @panel-box-shadow-style @panel-box-shadow;
+}
+
+
+// Modifier: `uk-panel-header`
+// ========================================================================
+
+.hook-panel-header() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-panel-misc() {
+
+    .uk-panel-box > .uk-nav-side { margin: 0; }
+
+    // Only large screens
+    @media (min-width: @breakpoint-xlarge) {
+
+        .uk-panel-box { padding: @panel-box-large-padding; }
+        .uk-panel-space { padding: @panel-space-large-padding; }
+        .uk-panel-hover { padding: @panel-hover-large-padding; }
+
+
+        .uk-panel-box > .uk-panel-teaser {
+            margin-top: @panel-box-teaser-large-margin;
+            margin-left: @panel-box-teaser-large-margin;
+            margin-right: @panel-box-teaser-large-margin;
+        }
+
+        .uk-panel-hover > .uk-panel-teaser {
+            margin-top: @panel-hover-teaser-large-margin;
+            margin-left: @panel-hover-teaser-large-margin;
+            margin-right: @panel-hover-teaser-large-margin;
+        }
+
+    }
+
+}

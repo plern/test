@@ -1,0 +1,72 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Badge
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@badge-background:                              @global-primary-background;
+@badge-padding-horizontal:                      10px;
+@badge-font-size:                               11px;
+@badge-text-transform:                          @global-alt-text-transform;
+@badge-font-weight:                             @global-font-weight;
+@badge-line-height:                             22px;
+@badge-color:                                   @global-contrast-color;
+@badge-hover-color:                             @badge-color;
+
+@badge-notification-font-size:                  11px;
+@badge-notification-line-height:                16px;
+
+@badge-success-background:                      @global-success-background;
+@badge-warning-background:                      @global-warning-background;
+@badge-danger-background:                       @global-danger-background;
+
+//
+// New
+//
+
+@badge-border-radius:                           @badge-line-height;
+@badge-font-family:                             @global-font-family;
+@badge-letter-spacing:                          0;
+
+
+// Component
+// ========================================================================
+
+.hook-badge() {
+    border-radius: @badge-border-radius;
+    font-family: @badge-font-family;
+    letter-spacing: @badge-letter-spacing;
+}
+
+
+// Color modifier
+// ========================================================================
+
+//
+// Modifier: `badge-success`
+//
+
+.hook-badge-success() {}
+
+//
+// Modifier: `badge-warning`
+//
+
+.hook-badge-warning() {}
+
+//
+// Modifier: `badge-danger`
+//
+
+.hook-badge-danger() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-badge-misc() {}

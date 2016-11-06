@@ -1,0 +1,122 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Navbar
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@navbar-background:                             @global-background;
+@navbar-color:                                  @global-color;
+@navbar-link-color:                             @global-link-color;
+@navbar-link-hover-color:                       @global-link-hover-color;
+@navbar-font-family:                            @global-heading-font-family;
+
+@navbar-nav-color:                              @global-color;
+@navbar-nav-padding-horizontal:                 0;
+@navbar-nav-font-size:                          @global-small-font-size;
+@navbar-nav-font-weight:                        @global-font-weight;
+@navbar-nav-font-family:                        @global-alt-font-family;
+@navbar-nav-hover-background:                   rgba(0,0,0,0);
+@navbar-nav-hover-color:                        @global-link-color;
+@navbar-nav-onclick-background:                 rgba(0,0,0,0);
+@navbar-nav-onclick-color:                      @global-color;
+@navbar-nav-active-background:                  rgba(0,0,0,0);
+@navbar-nav-active-color:                       @global-link-color;
+
+@navbar-brand-font-size:                        18px;
+@navbar-brand-color:                            @global-color;
+@navbar-brand-hover-color:                      @global-color;
+
+@navbar-toggle-font-size:                       15px;
+@navbar-toggle-color:                           @global-color;
+@navbar-toggle-hover-color:                     @global-color;
+@navbar-toggle-icon:                            "\e906";
+@navbar-toggle-icon-alt:                        "\e906";
+
+//
+// New
+//
+
+@navbar-background-image:                       @global-background-image;
+
+@navbar-nav-hover-transition:                   height 0.15s ease, color 0.15s ease;
+
+@navbar-nav-margin-horizontal:                  @global-margin;
+@navbar-nav-border-width:                       100%;
+@navbar-nav-border-height:                      2px;
+@navbar-nav-border-bottom:                      7px;
+
+@navbar-nav-font-family:                        @global-alt-font-family;
+@navbar-nav-font-weight:                        @global-alt-font-weight;
+@navbar-nav-text-transform:                     @global-alt-text-transform;
+@navbar-nav-letter-spacing:                     @global-alt-letter-spacing;
+
+@navbar-nav-border:                             @global-primary-background;
+
+@navbar-nav-margin:                             @global-margin;
+
+
+// Component
+// ========================================================================
+
+.hook-navbar() { background-image: @navbar-background-image; }
+
+
+// Sub-object: `uk-navbar-nav`
+// ========================================================================
+
+.hook-navbar-nav() {
+
+    font-family: @navbar-nav-font-family;
+    font-weight: @navbar-nav-font-weight;
+    text-transform: @navbar-nav-text-transform;
+    letter-spacing: @navbar-nav-letter-spacing;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: @navbar-nav-border-bottom;
+        left: 0;
+        height: 0;
+        width: @navbar-nav-border-width;
+        background: @global-primary-color;
+        -webkit-transition: @navbar-nav-hover-transition;
+        transition: @navbar-nav-hover-transition;
+    }
+
+}
+
+// Hover
+.hook-navbar-nav-hover() { &:after { height: @navbar-nav-border-height; } }
+
+// OnClick
+.hook-navbar-nav-onclick() {}
+
+// Active
+.hook-navbar-nav-active() { &:after { height: @navbar-nav-border-height; } }
+
+
+// Sub-object: `uk-navbar-content`
+// ========================================================================
+
+.hook-navbar-content() { margin: 0 @navbar-nav-margin; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-navbar-misc() {
+
+    .uk-navbar-nav > li { margin: 0 @navbar-nav-margin; }
+
+    .uk-navbar-content + .uk-navbar-content:not(.uk-navbar-center) { margin-left: 0; }
+
+    .uk-navbar-nav-subtitle:after { display: none; }
+
+    .uk-navbar-toggle:after { font-family: 'Luna'; }
+
+}

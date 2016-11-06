@@ -1,0 +1,246 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import 'https://fonts.googleapis.com/css?family=Playfair+Display';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,400,300';
+
+/* theme: Luna - ocean */
+
+//
+// General
+//
+
+@global-border-radius: 0;
+@global-box-shadow: rgba(0,0,0,0);
+
+//
+// Typography
+//
+
+@global-color: #AFB0C0;
+@global-heading-color: #FFFFFF;
+@global-muted-color: #656683;
+@global-link-color: #FFFFFF;
+@global-link-hover-color: #916A59;
+
+@global-primary-color: #BB875D;
+
+@global-heading-font-family: 'Playfair Display';
+@global-alt-font-family: 'Open Sans';
+@global-heading-font-weight: normal;
+@global-text-transform: none;
+@global-letter-spacing: 0;
+@global-alt-letter-spacing: 2px;
+@global-small-font-size: 12px;
+
+//
+// Backgrounds
+//
+
+@global-background: #111222;
+@global-muted-background: #16182b;
+@global-primary-background: #BB875D;
+@global-secondary-background: #232436;
+
+@global-success-background: #8acca0;
+@global-warning-background: #e7b378;
+@global-danger-background: #cc586e;
+
+@global-gradient-angle: 0;
+@global-gradient-start: rgba(0,0,0,0);
+@global-gradient-end: rgba(0,0,0,0);
+@global-secondary-gradient-start: #1F2030;
+@global-secondary-gradient-end: #343547;
+
+@global-background-image: none;
+
+//
+// Animations
+//
+
+@global-transition: background 0.1s ease;
+@global-transform: none;
+
+//
+// Alert
+//
+
+@alert-success-color: @global-background;
+@alert-warning-color: @global-background;
+@alert-danger-color: @global-background;
+
+//
+// Article
+//
+
+@article-meta-color: #BB875D;
+
+//
+// Badge
+//
+
+@badge-padding-horizontal: 8px;
+@badge-border-radius: @global-border-radius;
+@badge-font-weight: 400;
+@badge-color: @global-background;
+@badge-letter-spacing: 1px;
+
+//
+// Base
+//
+
+@base-code-color: #BB875D;
+@base-em-color: #FBAD74;
+@base-ins-background: #26283D;
+@base-mark-background: #26283D;
+@base-heading-text-transform: none;
+
+//
+// Block
+//
+
+@block-secondary-background: @global-secondary-background;
+@block-secondary-button-background: #fff;
+@block-secondary-button-hover-background: #fff;
+
+//
+// Breadcrumb
+//
+
+@breadcrumb-divider-color: @global-primary-color;
+@breadcrumb-divider-font-size: 12px;
+
+//
+// Button
+//
+
+@button-box-shadow: rgba(0,0,0,0);
+@button-hover-box-shadow: rgba(0,0,0,0);
+@button-active-box-shadow: rgba(0,0,0,0);
+
+@button-primary-gradient-start: rgba(0,0,0,0);
+@button-primary-gradient-end: rgba(0,0,0,0);
+@button-primary-hover-gradient-start: rgba(0,0,0,0);
+@button-primary-hover-gradient-end: rgba(0,0,0,0);
+@button-primary-active-gradient-start: rgba(0,0,0,0);
+@button-primary-active-gradient-end: rgba(0,0,0,0);
+
+@button-primary-hover-background: lighten(@global-primary-color, 7%);
+@button-primary-active-background: darken(@global-primary-color, 4%);
+
+@button-font-weight: 400;
+
+//
+// Description List
+//
+
+@description-list-dt-text-transform: none;
+@description-list-dt-font-size: 18px;
+
+//
+// Dropdown
+//
+
+@dropdown-background: #2e2e47;
+@dropdown-navbar-background: #2e2e47;
+@dropdown-box-shadow: rgba(0,0,0,0);
+@dropdown-form-background: lighten(@form-background, 5%);
+
+//
+// Form
+//
+
+@form-large-font-size: 13px;
+
+//
+// Icon
+//
+
+@icon-button-background: #26283D;
+@icon-button-color: #CDCDD8;
+@icon-button-transition: color 0.2s ease, background 0.2s ease;
+@icon-font-path: "../../fonts";
+
+//
+// Panel
+//
+
+@panel-title-font-size: 20px;
+@panel-box-background: #383a4f;
+@panel-box-primary-color: #fff;
+@panel-box-secondary-background: #1f2030;
+@panel-box-secondary-color: #AFB0C0;
+@panel-box-shadow: rgba(0,0,0,0);
+@panel-box-border-radius: 0;
+@panel-box-primary-box-shadow: rgba(0,0,0,0);
+@panel-box-secondary-box-shadow: rgba(0,0,0,0);
+@panel-box-border-radius: 0;
+@panel-box-primary-link-color: rgba(255,255,255,0.7);
+@panel-box-primary-button-box-shadow: rgba(0,0,0,0);
+@panel-box-primary-button-hover-background: fade(@panel-box-primary-button-background, 85%);
+@panel-box-primary-button-hover-box-shadow: rgba(0,0,0,0);
+@panel-box-primary-button-active-background: fade(@panel-box-primary-button-background, 75%);
+@panel-box-secondary-button-background: #fff;
+@panel-box-secondary-button-hover-background: fade(@panel-box-secondary-button-background, 85%);
+@panel-box-secondary-button-active-background: fade(@panel-box-secondary-button-background, 75%);
+@panel-primary-badge-background: darken(@global-primary-background, 5%);
+
+
+// Internal Global variables
+// ==========================================================================
+
+@global-style: 'ocean';
+
+
+// Theme Variables
+// ========================================================================
+
+// Blocks
+@theme-block-default-gradient-start: rgba(49,49,74,.9);
+@theme-block-default-gradient-end: rgba(49,49,74,0);
+@theme-block-primary-gradient-start: #caa281;
+@theme-block-primary-gradient-end: rgba(202,162,129,0);
+
+// Navbar
+//
+
+@theme-navbar-box-shadow: fade(@global-box-shadow, 20%);
+
+//
+// Totop Scroller
+//
+
+@theme-totop-scroller-color: rgba(255,255,255,0.5);
+
+// Heading Teaser
+@theme-teaser-margin-bottom: 100px;
+@theme-teaser-image-bottom: -50px;
+@theme-teaser-small-image-bottom: -55px;
+@theme-teaser-medium-image-bottom: -50px;
+@theme-teaser-large-image-bottom: -65px;
+@theme-heading-teaser-gradient-start: #EFF0F3;
+@theme-heading-teaser-gradient-end: #EFF0F3;
+@theme-heading-teaser-font-size: 73px;
+@theme-heading-teaser-font-weight: 600;
+@theme-heading-teaser-letter-spacing: -3px;
+@theme-heading-teaser-large-letter-spacing: -10px;
+@theme-heading-teaser-color: #EFF0F3;
+@theme-heading-teaser-large-font-size: 180px;
+
+// Background Circle Animation
+@theme-fx-circles-color-1: @global-muted-background;
+@theme-fx-circles-color-2: @global-muted-background;
+
+// Slideshow Luna
+@theme-slideshow-watermark-top: 25%;
+@theme-slideshow-watermark-left: -12%;
+@theme-slideshow-watermark-large-top: -8%;
+@theme-slideshow-watermark-large-left: -10%;
+@theme-slideshow-watermark-font-family: 'Open Sans';
+@theme-slideshow-watermark-font-size: 250px;
+@theme-slideshow-watermark-large-font-size: 350px;
+@theme-slideshow-watermark-font-weight: 600;
+@theme-slideshow-watermark-letter-spacing: -30px;
+@theme-slideshow-secondary-watermark-color: rgba(255,255,255,0.04);
+
+// Grid Shadow
+@theme-grid-box-shadow: rgba(0,0,0,0);

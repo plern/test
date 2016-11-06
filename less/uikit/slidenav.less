@@ -1,0 +1,47 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Slidenav
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@slidenav-width:                                40px;
+@slidenav-color:                                @global-secondary-background;
+@slidenav-font-size:                            30px;
+@slidenav-previous-icon:                        "\e905";
+@slidenav-next-icon:                            "\e904";
+
+@slidenav-hover-color:                          @global-color;
+
+@slidenav-active-color:                         @global-heading-color;
+
+
+// Component
+// ========================================================================
+
+.hook-slidenav() {}
+
+.hook-slidenav-hover() {}
+
+.hook-slidenav-active() {}
+
+.hook-slidenav-contrast() {}
+
+.hook-slidenav-contrast-hover() {}
+
+.hook-slidenav-contrast-active() {}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-slidenav-misc() {
+
+    .uk-slidenav-previous:before,
+    .uk-slidenav-next:before { font-family: 'Luna'; }
+
+}

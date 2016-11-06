@@ -1,0 +1,63 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Table
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@table-margin-vertical:                         @global-margin;
+
+@table-caption-color:                           @global-muted-color;
+@table-caption-font-size:                       @global-small-font-size;
+
+@table-striped-background:                      @global-muted-background;
+@table-hover-background:                        @global-secondary-background;
+@table-active-background:                       @global-muted-background;
+
+//
+// New
+//
+
+@table-striped-background-image:                @global-background-image;
+@table-hover-background-image:                  @global-background-image;
+@table-heading-font-size:                       @global-small-font-size;
+@table-heading-font-family:                     @global-alt-font-family;
+@table-heading-font-weight:                     @global-alt-font-weight;
+@table-heading-text-transform:                  @global-alt-text-transform;
+@table-heading-letter-spacing:                  @global-alt-letter-spacing;
+@table-heading-color:                           @global-heading-color;
+
+
+// Component
+// ========================================================================
+
+.hook-table() {}
+
+.hook-table-active() {}
+
+.hook-table-striped() { background-image: @table-striped-background-image; }
+
+.hook-table-condensed() {}
+
+.hook-table-hover() { background-image: @table-hover-background-image; }
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-table-misc() {
+
+    .uk-table thead th {
+        font-size: @table-heading-font-size;
+        font-family: @table-heading-font-family;
+        font-weight: @table-heading-font-weight;
+        color: @table-heading-color;
+        text-transform: @table-heading-text-transform;
+        letter-spacing: @table-heading-letter-spacing;
+    }
+
+}

@@ -1,0 +1,438 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300';
+@import 'https://fonts.googleapis.com/css?family=Poppins:300';
+
+/* theme: Luna - lightblue */
+
+//
+// General
+//
+
+@global-border: rgba(159,165,173,0.2);
+@global-border-radius: 0;
+@global-box-shadow: rgba(0,0,0,0);
+@global-hover-box-shadow: rgba(0,0,0,0);
+
+//
+// Typography
+//
+
+@global-color: #9fa5ad;
+@global-heading-color: #253559;
+@global-muted-color: #cdced2;
+@global-link-color: #26365a;
+@global-link-hover-color: #7d8aa6;
+@global-font-size: 14px;
+@global-line-height: 24px;
+@global-heading-font-family: 'Poppins';
+@global-alt-font-family: 'Poppins';
+@global-heading-font-weight: 300;
+@global-alt-font-weight: 300;
+@global-text-transform: none;
+@global-alt-text-transform: none;
+@global-letter-spacing: 0;
+@global-alt-letter-spacing: 0;
+
+//
+// Backgrounds
+//
+
+@global-background: #ffffff;
+@global-muted-background: #f0f2f6;
+@global-primary-background: #26365a;
+@global-secondary-background: #192134;
+@global-warning-background: #facf4d;
+@global-gradient-start: rgba(0,0,0,0);
+@global-gradient-end: rgba(0,0,0,0);
+@global-secondary-gradient-start: rgba(0,0,0,0);
+@global-secondary-gradient-end: rgba(0,0,0,0);
+
+//
+// Animations
+//
+
+@global-transition: color 0.15s ease, background 0.15s ease;
+@global-transform: none;
+
+//
+// Alert
+//
+
+@alert-background: @global-muted-background;
+@alert-color: darken(@global-color, 20%);
+@alert-background-image: none;
+
+//
+// Article
+//
+
+@article-title-font-size: 36px;
+
+//
+// Base
+//
+
+@base-h2-font-size: 36px;
+@base-h1-font-size: 48px;
+@base-h3-font-size: 18px;
+@base-h4-font-size: 17px;
+@base-code-color: #ed5a6a;
+@base-ins-background: rgba(255,169,57,0.3);
+@base-ins-color: darken(@global-color, 20%);
+@base-mark-background: rgba(255,212,26,0.3);
+@base-mark-color: darken(@global-color, 20%);
+@base-em-color: #facf4d;
+@base-pre-background: @global-muted-background;
+
+//
+// Block
+//
+
+@block-default-background-image: @global-background-image;
+@block-secondary-background: #192134;
+@block-muted-panel-box-secondary-border: darken(@block-muted-background, 5%);
+@block-muted-background-image: none;
+@block-muted-button-background: darken(@block-muted-background, 5%);
+@block-muted-button-hover-background: darken(@block-muted-background, 8%);
+@block-secondary-background-image: none;
+@block-primary-background-image: none;
+@block-secondary-panel-box-secondary-border: #323f5d;
+
+//
+// Breadcrumb
+//
+
+@breadcrumb-divider: "-";
+@breadcrumb-divider-font-size: 12px;
+
+//
+// Button
+//
+
+@button-background: #eceef2;
+@button-color: @global-link-color;
+@button-hover-background: darken(@button-background, 4%);
+@button-hover-color: @global-link-color;
+@button-active-background: desaturate(darken(@button-background, 7%), 10%);
+@button-active-color: @global-color;
+@button-primary-color: fade(@global-contrast-color, 95%);
+@button-primary-hover-background: desaturate(lighten(@button-primary-background, 8%), 5%);
+@button-primary-hover-color: #fff;
+@button-primary-active-background: lighten(@button-primary-background, 5%);
+@button-primary-active-color: rgba(255,255,255,0.7);
+@button-disabled-background: lighten(@button-background, 2%);
+@button-padding-horizontal: 25px;
+@button-mini-padding-horizontal: 10px;
+@button-small-padding-horizontal: 15px;
+@button-large-padding-horizontal: 35px;
+@button-border-radius: @button-large-height;
+@button-background-image: none;
+@button-box-shadow: rgba(0,0,0,0);
+@button-hover-box-shadow: rgba(0,0,0,0);
+
+//
+// Close
+//
+
+@close-alt-background: @global-muted-background;
+
+//
+// Comment
+//
+
+@comment-primary-box-shadow: rgba(0,0,0,0);
+@comment-primary-header-border: darken(@comment-header-border, 5%);
+@comment-primary-background-image: none;
+
+//
+// Contrast
+//
+
+@contrast-inverted-color: @global-link-color;
+@contrast-tab-border-background: #fff;
+@contrast-button-background: #ebedef;
+@contrast-button-hover-background: darken(@contrast-button-background, 3%);
+@contrast-button-active-background: darken(@contrast-button-background, 7%);
+@contrast-button-link-color: lighten(@global-primary-color, 35%);
+
+//
+// Dropdown
+//
+
+@dropdown-background: @global-muted-background;
+@dropdown-box-shadow: rgba(0,0,0,0);
+@dropdown-navbar-background:  @global-muted-background;
+@dropdown-form-background: #fff;
+@dropdown-form-focus-background: #fafafa;
+@dropdown-background-image: none;
+
+//
+// Form
+//
+
+@form-padding: 4px 15px;
+@form-background: darken(@global-muted-background, 2%);
+@form-focus-background: darken(@form-background, 3%);
+@form-focus-color: @global-link-color;
+@form-disabled-background: lighten(@form-background, 2%);
+@form-disabled-color: fade(@global-color, 50%);
+@form-icon-width: 42px;
+@form-border-radius: (@global-height-large / 2);
+@form-background-image: none;
+
+//
+// Icon
+//
+
+@icon-font-path: "../../fonts";
+@icon-button-background: #f0f2f6;
+@icon-button-color: @global-link-color;
+@icon-button-hover-box-shadow: rgba(0,0,0,0);
+@icon-button-active-background: lighten(@icon-button-hover-background, 10%);
+@icon-button-active-color: fade(@global-contrast-color, 80%);
+@icon-button-background-image: none;
+
+//
+// Nav
+//
+
+@nav-font-size: 14px;
+@nav-subtitle-font-size: 11px;
+@nav-nested-font-size: 13px;
+@nav-dropdown-nested-color: @global-muted-color;
+@nav-navbar-nested-color: @global-muted-color;
+@nav-offcanvas-color: #fff;
+@nav-offcanvas-hover-color: rgba(255,255,255,0.7);
+@nav-offcanvas-active-color: #facf4d;
+@nav-offcanvas-header-color: rgba(255,255,255,0.7);
+@nav-offcanvas-divider-border: rgba(255,255,255,0.1);
+
+//
+// Navbar
+//
+
+@navbar-background-image: none;
+
+//
+// Off-canvas
+//
+
+@offcanvas-panel-link-color: #fff;
+@offcanvas-panel-link-hover-color: @offcanvas-panel-color;
+@offcanvas-background-image: none;
+
+//
+// Overlay
+//
+
+@overlay-panel-background: fade(@global-primary-background, 20%);
+@overlay-button-box-shadow: rgba(0,0,0,0);
+@overlay-button-hover-box-shadow: rgba(0,0,0,0);
+
+//
+// Pagination
+//
+
+@pagination-onclick-color: @global-color;
+@pagination-hover-background: #facf4d;
+@pagination-hover-color: #fff;
+@pagination-active-background: #facf4d;
+@pagination-active-color: #fff;
+@pagination-hover-box-shadow: rgba(0,0,0,0);
+@pagination-background-image: none;
+
+//
+// Panel
+//
+
+@panel-box-background: #f8f9fb;
+@panel-box-primary-color: rgba(208,223,255,0.7);
+@panel-box-primary-title-color: #fff;
+@panel-box-primary-button-box-shadow: rgba(0,0,0,0);
+@panel-box-primary-button-hover-box-shadow: rgba(0,0,0,0);
+@panel-box-secondary-background: rgba(0,0,0,0);
+@panel-box-secondary-color: @global-color;
+@panel-box-shadow: rgba(0,0,0,0);
+@panel-box-border-radius: 0;
+@panel-box-primary-link-color: #fff;
+@panel-box-primary-box-shadow: rgba(0,0,0,0);
+@panel-box-primary-button-hover-background: #d0dfff;
+@panel-box-secondary-border-width: 4px;
+@panel-box-secondary-border: @global-border;
+@panel-box-secondary-box-shadow: rgba(0,0,0,0);
+@panel-box-secondary-button-background: @global-primary-background;
+@panel-box-secondary-button-color: #fff;
+@panel-box-secondary-button-active-color: rgba(255,255,255,0.8);
+@panel-box-background-image: none;
+@panel-box-button-disabled-background: desaturate(darken(@panel-box-background, 3%), 10%);
+@panel-box-primary-button-disabled-background: fade(@panel-box-primary-button-background, 20%);
+@panel-box-secondary-button-disabled-background: @button-disabled-background;
+@panel-box-secondary-button-disabled-color: @button-disabled-color;
+
+//
+// Subnav
+//
+
+@subnav-line-border: @global-muted-color;
+@subnav-pill-hover-background: @global-muted-background;
+@subnav-pill-hover-color: @global-link-color;
+@subnav-pill-border-radius: (@global-line-height + (@subnav-pill-padding-vertical * 2));
+@subnav-pill-padding-horizontal: 12px;
+@subnav-pill-background-image: none;
+
+//
+// Tab
+//
+
+@tab-border-background: @global-muted-background;
+
+//
+// Table
+//
+
+@table-striped-background: fade(@global-muted-background, 60%);
+@table-hover-background: @global-muted-background;
+@table-active-background: fade(@global-muted-background, 60%);
+@table-striped-background-image: none;
+@table-hover-background-image: none;
+
+//
+// Thumbnail
+//
+
+@thumbnail-box-shadow: rgba(0,0,0,0);
+@thumbnail-hover-box-shadow: rgba(0,0,0,0);
+@thumbnail-background: rgba(0,0,0,0);
+@thumbnail-hover-background: rgba(0,0,0,0);
+@thumbnail-border-width: 4px;
+@thumbnail-border: @global-border;
+@thumbnail-hover-border: darken(@global-border, 5%);
+@thumbnail-background-image: none;
+
+
+// Component variables
+// ==========================================================================
+
+//
+// Autocomplete
+//
+
+@nav-autocomplete-active-color: #fff;
+
+//
+// Datepicker
+//
+
+@datepicker-table-hover-background: darken(@global-secondary-background, 6%);
+@datepicker-table-hover-color: #fff;
+@datepicker-table-onclick-background: darken(@global-secondary-background, 4%);
+@datepicker-table-active-background: lighten(@global-secondary-background, 9%);
+@datepicker-table-active-color: @global-color;
+
+//
+// Dotnav
+//
+
+@dotnav-background: rgba(212,215,220,0.6);
+@dotnav-hover-background: darken(@global-muted-background, 5%);
+@dotnav-onclick-background: darken(@global-muted-background, 10%);
+
+//
+// Progress
+//
+
+@progress-background: @global-muted-background;
+@progress-background-image: none;
+
+//
+// Search
+//
+
+@nav-search-color: #fff;
+@nav-search-hover-color: rgba(255,255,255,0.7);
+@nav-search-active-color: #facf4d;
+@nav-search-header-color: rgba(255,255,255,0.7);
+@nav-search-divider-border: rgba(255,255,255,0.2);
+@dropdown-search-background-image: none;
+
+
+//
+// Slidenav
+//
+
+@slidenav-color: @global-muted-background;
+@slidenav-hover-color: darken(@global-muted-background, 5%);
+@slidenav-active-color: darken(@global-muted-background, 10%);
+
+//
+// Tooltip
+//
+
+@tooltip-color: #fff;
+
+
+// Internal Global variables
+// ==========================================================================
+
+@global-style: 'lightblue';
+
+
+// Theme Variables
+// ========================================================================
+
+// Navbar
+@theme-navbar-box-shadow: rgba(0,0,0,0);
+@theme-navbar-secondary-color: fade(@global-contrast-color, 60%);
+@theme-navbar-secondary-link-color: @global-contrast-color;
+@theme-navbar-secondary-link-hover-color: @global-contrast-color;
+@theme-navbar-secondary-nav-color: fade(@global-contrast-color, 60%);
+@theme-navbar-secondary-nav-border: @global-warning-background;
+@theme-navbar-secondary-nav-hover-color: @global-contrast-color;
+@theme-navbar-secondary-nav-onclick-color: fade(@global-contrast-color, 60%);
+@theme-navbar-secondary-nav-active-color: @global-contrast-color;
+@theme-navbar-secondary-brand-color: @global-contrast-color;
+@theme-navbar-secondary-brand-hover-color: @theme-navbar-secondary-brand-color;
+@theme-navbar-secondary-toggle-color: @global-contrast-color;
+@theme-navbar-secondary-toggle-hover-color: @theme-navbar-secondary-toggle-color;
+
+// Logo
+@theme-logo-color: #3B5080;
+@theme-logo-muted-color: #3B5080;
+
+// Totop Scroller
+@theme-block-secondary-totop-scroller-hover-color: #fff;
+
+// Teaser
+@theme-teaser-margin-bottom: 75px;
+@theme-teaser-image-bottom: -40px;
+@theme-teaser-small-image-bottom: -40px;
+@theme-teaser-medium-image-bottom: -30px;
+@theme-teaser-large-image-bottom: -30px;
+@theme-heading-teaser-background-image: none;
+@theme-heading-teaser-gradient-start: #e6e9ed;
+@theme-heading-teaser-gradient-end: #e6e9ed;
+@theme-heading-teaser-font-family: 'Poppins';
+@theme-heading-teaser-font-size: 82px;
+@theme-heading-teaser-large-font-size: 240px;
+@theme-heading-teaser-font-weight: 300;
+@theme-heading-teaser-color: #e6e9ed;
+@theme-heading-teaser-text-shadow-style: 0 0 0;
+@theme-heading-teaser-text-shadow: rgba(0,0,0,0);
+
+// Background Animations
+@theme-fx-geometries-box-shadow: rgba(0,0,0,0.07);
+
+// Grid Luna
+@theme-check-icon-border: @global-warning-background;
+@theme-check-icon-color: @global-primary-color;
+
+// Slideshow Luna
+@theme-slideshow-watermark-font-family: 'Poppins';
+@theme-slideshow-watermark-font-weight: 300;
+@theme-slideshow-watermark-letter-spacing: -20px;
+@theme-slideshow-watermark-color: @global-muted-background;
+@theme-slideshow-secondary-watermark-color: lighten(@global-muted-background, 2%);
+
+// Grid Shadow
+@theme-grid-box-shadow: rgba(0,0,0,0);

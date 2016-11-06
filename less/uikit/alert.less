@@ -1,0 +1,96 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Alert
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@alert-margin-vertical:                         @global-margin;
+@alert-padding:                                 @global-margin-small @global-margin;
+@alert-large-padding:                           @global-margin-large;
+
+@alert-background:                              @global-secondary-background;
+@alert-color:                                   lighten(@global-color, 30%);
+
+@alert-success-background:                      @global-success-background;
+@alert-success-color:                           lighten(@global-success-color, 40%);
+
+@alert-warning-background:                      @global-warning-background;
+@alert-warning-color:                           lighten(@global-warning-color, 35%);
+
+@alert-danger-background:                       @global-danger-background;
+@alert-danger-color:                            lighten(@global-danger-color, 50%);
+
+
+//
+// New
+//
+
+@alert-background-image:                        @global-background-image;
+@alert-border-radius:                           @global-border-radius;
+
+
+// Component
+// ========================================================================
+
+.hook-alert() {
+
+    border-radius: @alert-border-radius;
+
+    a {
+        color: @alert-color;
+        text-decoration: underline;
+    }
+
+    a:hover {
+        color: @alert-color;
+        text-decoration: none;
+    }
+
+}
+
+
+// Modifier: `uk-alert-success`
+// ========================================================================
+
+.hook-alert-success() {
+    a { color: @alert-success-color; }
+    a:hover { color: @alert-success-color; }
+}
+
+
+// Modifier: `uk-alert-warning`
+// ========================================================================
+
+.hook-alert-warning() {
+    a { color: @alert-warning-color; }
+    a:hover { color: @alert-warning-color; }
+}
+
+
+// Modifier: `uk-alert-danger`
+// ========================================================================
+
+.hook-alert-danger() {
+    a { color: @alert-danger-color; }
+    a:hover { color: @alert-danger-color; }
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-alert-misc() {
+
+    .uk-alert { background-image: @alert-background-image; }
+
+    .uk-alert-close {
+        line-height: inherit;
+        text-decoration: none !important;
+    }
+
+}

@@ -1,0 +1,145 @@
+// Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+//
+// Component: Search
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+@search-width:                                  40px;
+@search-height:                                 40px;
+@search-background:                             rgba(0,0,0,0);
+@search-color:                                  @global-color;
+@search-placeholder-color:                      rgba(0,0,0,0);
+
+@search-icon:                                   "\e900";
+@search-icon-color:                             @global-color;
+
+// Dropdown modifier
+@dropdown-search-background:                    lighten(@global-secondary-background, 2%);
+@dropdown-search-color:                         @global-color;
+
+// Nav modifier
+@nav-search-color:                              @global-color;
+@nav-search-active-background:                  rgba(0,0,0,0);
+@nav-search-active-color:                       @global-link-color;
+@nav-search-header-color:                       @global-heading-color;
+@nav-search-divider-border:                     @global-border;
+@nav-search-nested-color:                       lighten(@global-muted-color, 10%);
+@nav-search-nested-hover-color:                 @global-color;
+
+// Search in offcanvas
+@offcanvas-search-margin:                       @global-padding 0;
+@offcanvas-search-background:                   rgba(0,0,0,0);
+@offcanvas-search-color:                        @global-color;
+@offcanvas-search-placeholder-color:            @global-color;
+@offcanvas-search-icon-color:                   @global-color;
+
+//
+// New
+//
+
+@search-font-size:                              @global-small-font-size;
+@search-text-transform:                         @global-text-transform;
+@search-letter-spacing:                         @global-letter-spacing;
+@dropdown-search-background-image:              @global-background-image;
+@nav-search-hover-color:                        @global-link-color;
+
+
+// Component
+// ========================================================================
+
+.hook-search() {}
+
+.hook-search-icon() { font-family: 'Luna'; }
+
+
+// Sub-object `uk-search-field`
+// ========================================================================
+
+.hook-search-field() {
+    position: relative;
+    font-size: @search-font-size;
+    text-transform: @search-text-transform;
+    letter-spacing: @search-letter-spacing;
+    cursor: pointer;
+}
+
+.hook-search-field-focus() {}
+
+
+// Dropdown modifier: `uk-dropdown-search`
+// ========================================================================
+
+.hook-dropdown-search() { background-image: @dropdown-search-background-image; }
+
+
+// Nav modifier `uk-nav-search`
+// ========================================================================
+
+//
+// Items
+//
+
+.hook-nav-search() {
+    &:hover { color: @nav-search-hover-color; }
+}
+
+// Active
+.hook-nav-search-active() {}
+
+//
+// Sub-object: `uk-nav-header`
+//
+
+.hook-nav-search-header() {}
+
+//
+// Sub-object: `uk-nav-divider`
+//
+
+.hook-nav-search-divider() {}
+
+
+// Search in offcanvas
+// ========================================================================
+
+.hook-offcanvas-search-field() {
+    padding-right: 0;
+    padding-left: @search-padding;
+    text-align: left;
+}
+
+
+// Miscellaneous
+// ========================================================================
+
+.hook-search-misc() {
+
+
+    //Search in navbar
+    .uk-navbar {
+
+        .uk-search:before {
+            left: auto;
+            right: 0;
+        }
+
+        .uk-search-field {
+            padding-right: @search-padding;
+            text-align: right;
+        }
+
+    }
+
+    // Search in off-canvas
+    .uk-offcanvas .uk-search:before {
+        left: 0;
+        padding-left: 0;
+        right: auto;
+    }
+
+}
